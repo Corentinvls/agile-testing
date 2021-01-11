@@ -5,29 +5,28 @@ import codingfactory.rpgconsole.hero.Hero;
 public class Game {
 
     private Boolean isGameOver;
-    private InputHandler inputHandler;
+    private final InputHandler inputHandler;
 
-    private Hero hero;
-    private Enemy enemy;
-
-    /** CONTRUCTOR METHOD - inciialize variabe gameOver */
-    public Game(){
+    /** CONSTRUCTOR METHOD - initialize variable gameOver */
+    public Game() {
         isGameOver = false;
         inputHandler = new InputHandler();
     }
-    public void gameLoop(){
+
+    public void gameLoop() {
         System.out.println("Game Loop.");
 
-        hero = createNewHero();
-        enemy = createNewEnemy();
+        Hero hero = createNewHero();
+        Enemy enemy = createNewEnemy();
 
-        while (isGameOver == false){
+        while (!isGameOver) {
             System.out.println("Fight !!");
             //verification of hp
-            if(hero.getHp() <= 0){
+            if(hero.getHp() <= 0) {
                 System.out.println(hero.getName() + " died. You loose! Try again ...");
                 isGameOver = true;
-            }else{
+            }
+            else {
                 //how plays?
                 System.out.println(enemy.getName() + "(HP: " + enemy.getHp() + ")"); //name of enemy
                 System.out.println(hero.getName() + "(HP: " + hero.getHp() + "). Your turn!"); //name of hero
@@ -35,22 +34,25 @@ public class Game {
                 System.out.println("'m' hero infos.");
                 System.out.println("'a' attack.");
 
-                //take caracter
+                //take character
                 Character c = inputHandler.getChar(); //read char "c"
-                if (c.equals('x')){
+                if (c.equals('x')) {
                     isGameOver = true;
-                }else if(c.equals('a')){
+                }
+                else if(c.equals('a')) {
                     hero.attack(enemy);
-                    if(enemy.getHp() <= 0){
+                    if(enemy.getHp() <= 0) {
                         System.out.println(enemy.getName() + " died!");
                         hero.levelUp();
                         System.out.println(hero.getName() + " has now level up ! New level: " + hero.getLevel());
                         enemy = createNewEnemy(); //if enemy died, create a new enemy
-                    }else{ //if enemy not died, enemy attack hero
+                    }
+                    else { //if enemy not died, enemy attack hero
                         enemy.attack(hero);
                     }
-                } else if (c.equals('m')){
-                    Integer maxAttack = hero.getDamage() + hero.getLevel();
+                }
+                else if (c.equals('m')) {
+                    int maxAttack = hero.getDamage() + hero.getLevel();
                     System.out.println("*** Hero Infos ***");
                     System.out.println(hero.getName());
                     System.out.println("(LEVEL: " + hero.getLevel() + ")");
@@ -70,7 +72,7 @@ public class Game {
     private Enemy createNewEnemy() {
         String name = "Skeleton";
         System.out.println("A " + name + " appeared!");
-        Integer level = 1;
+        int level = 1;
         return new Enemy(name, level);
     }
 }
