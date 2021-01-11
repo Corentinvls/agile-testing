@@ -1,0 +1,5 @@
+
+*.class
+functional-tests/bin/test/functional/FunctionalTest.class
+functional-tests/functional-tests.iml
+functional-tests/chromedriver.exe
