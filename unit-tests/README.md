@@ -1,3 +1,10 @@
+## Help to set config for all OS
+```sh
+https://www.tutorialspoint.com/junit/junit_environment_setup.htm
+```
+
+### Mac
+
 ## HomeBrew Install and wget Install
 ```sh
 # Install mac homebrew, to know more read https://brew.sh/index_fr
@@ -28,6 +35,28 @@ export CLASSPATH=/Library/Java/JUNIT/junit-4.12.jar:/Library/Java/JUNIT/hamcrest
 # Save file and exit VIM by doing: esc : wq!
 # Refresh terminal config
 source ~/.bash_profile
+```
+
+### Windows
+
+## Install JUnit & Hamcrest
+```sh
+Download on Oracle the Java JDK 1.8
+```
+```sh
+Download JUnit 4 (>= 4.12)
+Download HamCrest-2.2.jar;
+Download HamCrest-all-1.3.jar
+```
+```sh
+# Do Step 1 to 5 on :
+https://www.tutorialspoint.com/junit/junit_environment_setup.htm
+Dont forget to create the environment variables (JAVA_HOME, JUNIT_HOME, CLASSPATH)
+```
+# Warning :
+```sh
+CLASSPATH = %CLASSPATH%;%JUNIT_HOME%\*;.;
+and update PATH
 ```
 
 ## Clone the repository on your computer
