@@ -1,0 +1,6 @@
+.idea/
+out
+unit-tests/unit-tests.iml
+acceptance-tests/acceptance-tests.iml
+functional-tests/functional-tests.iml
+
