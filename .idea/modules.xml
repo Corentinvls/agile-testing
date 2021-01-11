@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/acceptance-tests/acceptance-tests.iml" filepath="$PROJECT_DIR$/acceptance-tests/acceptance-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/agile-testing.iml" filepath="$PROJECT_DIR$/.idea/agile-testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/functional-tests/functional-tests.iml" filepath="$PROJECT_DIR$/functional-tests/functional-tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unit-tests/unit-tests.iml" filepath="$PROJECT_DIR$/unit-tests/unit-tests.iml" />
+    </modules>
+  </component>
+</project>

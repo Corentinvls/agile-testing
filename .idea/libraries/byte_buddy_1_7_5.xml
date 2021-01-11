@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="byte-buddy-1.7.5">
+    <CLASSES>
+      <root url="jar://C:/Program Files/JUnit/byte-buddy-1.7.5.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/client-combined-3.8.1.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/commons-codec-1.10.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/commons-exec-1.3.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/commons-logging-1.2.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/gson-2.8.2.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/guava-23.0.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/hamcrest-2.2.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/hamcrest-all-1.3.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/httpclient-4.5.3.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/httpcore-4.4.6.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/junit-4.12.jar!/" />
+      <root url="jar://C:/Program Files/JUnit/selenium-server-standalone-3.8.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
