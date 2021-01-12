@@ -10,10 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -106,10 +104,89 @@ public class FunctionalTest {
             String txt = anchor.getAttribute("data-copy");
             System.out.println("text: '" + txt + "'");
             assertThat(choices, hasItem(txt));
-            choices.remove(txt);
             System.out.println("\nEnd\n");
-
         }
+    }
+
+    @Test
+    public void testMeetups(){
+        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
+
+        WebElement stripeMenu = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[3]"));
+        WebElement list = stripeMenu.findElement(By.tagName("ul"));
+        List<WebElement> menuLinks = list.findElements(By.tagName("li"))
+                .stream()
+                .filter(item -> !item.getAttribute("class").equals("display-none"))
+                .collect(Collectors.toList());
+
+        List<String> links = Arrays.asList("Événements", "Photos", "Membres", "Discussions", "À propos", "Plus");
+
+        for (WebElement menuLink : menuLinks) {
+            WebElement anchor = menuLink.findElement(By.tagName("span"));
+            String txt = anchor.getText();
+            assertThat(links, hasItem(txt));
+        }
+    }
+
+    @Test
+    public void testViewAllLinks(){
+        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
+
+        List<String> xpaths = Arrays.asList(
+                "/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[4]/div/div/div/div[1]/section[2]/div/div[1]/div[2]/a/span",
+                "/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[4]/div/div/div/div[2]/section[2]/div[1]/div[2]/a/span",
+                "/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[4]/div/div/div/div[1]/section[3]/div[1]/div[2]/a/span",
+                "/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[5]/div/section/div[1]/div/div[2]/a/span");
+
+        List<String> viewAll = Collections.singletonList("Voir tout");
+
+        for (String xpath : xpaths) {
+            System.out.println(xpath);
+            String txt = driver.findElement(By.xpath(xpath)).getText();
+            assertThat(viewAll, hasItem(txt));
+        }
+    }
+
+    @Test
+    public void testContact(){
+        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
+        String expedctedUrl = "https://secure.meetup.com/fr-FR/login/";
+
+        driver.findElement(By.className("orgInfo-message")).click();
+
+        String redirectUrl = driver.getCurrentUrl();
+        assertTrue(redirectUrl.contains(expedctedUrl));
+    }
+
+    @Test
+    public void testNextMeetup() {
+        driver.get("https://www.meetup.com/fr-FR/promenades-et-randonnees/");
+
+        try {
+            driver.findElement(By.className("emptyEventCard")).isDisplayed();
+            assertTrue(driver.findElement(By.className("emptyEventCard")).isEnabled());
+        } catch (Exception e) {
+            driver.findElement(By.className("groupHome-eventsList-upcomingEvents")).isDisplayed();
+            assertTrue(driver.findElement(By.className("groupHome-eventsList-upcomingEvents")).isEnabled());
+        }
+    }
+
+    @Test
+    public void testLogin(){
+        driver.get("https://www.meetup.com/fr-FR/promenades-et-randonnees/");
+
+        driver.findElement(By.id("actionButtonLink")).click();
+
+        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(3) > a > div > div:nth-child(2) > span")).getText(),"Continuer avec Facebook");
+        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(4) > a > div > div:nth-child(2) > span")).getText(),"Continuer avec Google");
+        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(5) > a > div > div:nth-child(2) > span")).getText(),"Continue with Apple");
+
+        String expedctedUrl = "https://secure.meetup.com/fr-FR/register/";
+
+        driver.findElement(By.className("signUpModal-email")).click();
+
+        String redirectUrl = driver.getCurrentUrl();
+        assertTrue(redirectUrl.contains(expedctedUrl));
     }
 
     @After
