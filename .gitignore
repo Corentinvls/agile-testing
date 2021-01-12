@@ -30,8 +30,11 @@ DerivedData
 .gradle
 local.properties
 unit-tests/unit-tests.iml
-acceptance-tests/acceptance-tests.iml
-functional-tests/functional-tests.iml
+/acceptance-tests/acceptance-tests.iml
+/functional-tests/functional-tests.iml
+/pixelperfect-test/pixelperfect-tests.iml
+/unit-tests/unit-tests.iml
+/functional-tests/chromedriver.exe
 *.iml
 
 # BUCK
@@ -84,4 +87,3 @@ config.json
 .env.development.local
 .env.test.local
 .env.production.local
-/functional-tests/chromedriver.exe
