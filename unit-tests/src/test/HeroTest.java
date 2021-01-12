@@ -10,10 +10,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import codingfactory.rpgconsole.hero.Hero;
+import codingfactory.rpgconsole.enemy.Enemy;
 
 public class HeroTest {
 
 	Hero hero;
+	Enemy enemy;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -28,7 +30,8 @@ public class HeroTest {
 	@Before
 	public void setUp() throws Exception {
 		hero = new Hero("Jaina Portvaillant");
-		System.out.println("\nBefore a test...");
+		enemy = new Enemy("toto", 1);
+		System.out.println("Avant un test");
 	}
 
 	@After
@@ -41,6 +44,20 @@ public class HeroTest {
 		int lvl = hero.getLevel();
 		hero.levelUp();
 		assertThat(hero, hasProperty("level", is(lvl + 1)));
+	}
+
+	@Test
+	public void testHeroTakeDamage() throws Exception {
+		hero.takeDamage(10);
+		assertThat(hero, hasProperty("hp", is(10)));
+		hero.takeDamage(40);
+		assertThat(hero, hasProperty("hp", is(0)));
+	}
+
+	@Test
+	public void testHeroAttack() throws Exception {
+		hero.attack(enemy);
+		assertThat(enemy, hasProperty("hp", lessThan(15)));
 	}
 
 	@Test

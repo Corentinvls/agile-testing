@@ -49,7 +49,7 @@ public class Enemy {
         this.setDamage(this.level);
     }
 
-    public void takeDamage(int damage){
+    public void takeDamage(int damage) {
         this.hp -= damage;
         if (this.hp < 0) {
             this.setHp(0);
