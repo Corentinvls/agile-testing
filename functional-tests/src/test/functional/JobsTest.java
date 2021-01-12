@@ -9,17 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.openqa.selenium.interactions.Actions;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class JobsTest {
 
@@ -30,10 +25,15 @@ public class JobsTest {
         String OS = System.getProperty("os.name").toLowerCase();
         System.setProperty("webdriver.chrome.driver",
                 OS.contains("win") ?
-                "chromedriver.exe" :
-                "/Library/Java/JUNIT/chromedriver");
+                        "chromedriver.exe" :
+                        "/Library/Java/JUNIT/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    }
+
+    @After
+    public void tearDown() {
+        driver.quit();
     }
 
     @Test

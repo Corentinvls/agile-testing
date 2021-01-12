@@ -7,10 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -25,27 +23,25 @@ import static org.junit.Assert.assertTrue;
 public class MeetUpDetailedView {
 
     private WebDriver driver;
-    private ChromeOptions options;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         String OS = System.getProperty("os.name").toLowerCase();
-        System.setProperty("webdriver.chrome.driver", OS.contains("win") ? "chromedriver.exe" : "/Library/Java/JUNIT/chromedriver");
-        //create object of chrome options
-       /* options = new ChromeOptions();
-
-        //add the headless argument
-        options.addArguments("headless");*/
+        System.setProperty("webdriver.chrome.driver",
+                OS.contains("win") ?
+                        "chromedriver.exe" :
+                        "/Library/Java/JUNIT/chromedriver");
         driver = new ChromeDriver();
-        // Seems no more working in last Chrome versions
-        // driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
 
     @Test
-    public void testHeader() throws Exception {
-
+    public void testHeader() {
         String url = "https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/";
         String headerSelector = "#mupMain > div.groupHomeHeader.stripe.border--none > div > section";
         String titleSelector = "a.groupHomeHeader-groupNameLink";
@@ -64,11 +60,37 @@ public class MeetUpDetailedView {
         assertTrue("Test Leader", driver.findElement(By.cssSelector(leaderSelector)).isEnabled());
         assertTrue("Test Join button", driver.findElement(By.id(joinButtonId)).isEnabled());
         assertTrue("Test image", driver.findElement(By.xpath(imageXpath)).isEnabled());
-
-
     }
+
     @Test
-    public void testViewAllLinks(){
+    public void testStripeMenu() {
+        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
+
+        WebElement stripeMenu = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[3]"));
+        WebElement list = stripeMenu.findElement(By.tagName("ul"));
+        List<WebElement> menuLinks = list.findElements(By.tagName("li"))
+                .stream()
+                .filter(item -> !item.getAttribute("class").equals("display-none"))
+                .collect(Collectors.toList());
+
+        List<String> links = new ArrayList<String>();
+        links.add("Événements");
+        links.add("Photos");
+        links.add("Membres");
+        links.add("Discussions");
+        links.add("À propos");
+        links.add("Plus");
+
+        for (WebElement menuLink : menuLinks) {
+            WebElement anchor = menuLink.findElement(By.tagName("span"));
+            String txt = anchor.getText();
+            assertThat(links, hasItem(txt));
+            links.remove(txt);
+        }
+    }
+
+    @Test
+    public void testViewAllLinks() {
         driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
 
         List<String> xpaths = Arrays.asList(
@@ -85,75 +107,60 @@ public class MeetUpDetailedView {
             assertThat(viewAll, hasItem(txt));
         }
     }
-    @Test
-    public void testContact(){
-        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
-        String expedctedUrl = "https://secure.meetup.com/fr-FR/login/";
-
-        driver.findElement(By.className("orgInfo-message")).click();
-
-        String redirectUrl = driver.getCurrentUrl();
-        assertTrue(redirectUrl.contains(expedctedUrl));
-    }
-    @Test
-    public void testStripeMenu() {
-        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
-
-        WebElement stripeMenu = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[3]/main/div[3]"));
-        WebElement list = stripeMenu.findElement(By.tagName("ul"));
-        List<WebElement> menuLinks = list.findElements(By.tagName("li"))
-                .stream()
-                .filter(item -> !item.getAttribute("class").equals("display-none"))
-                .collect(Collectors.toList());
-
-        List<String> links = Arrays.asList("Événements", "Photos", "Membres", "Discussions", "À propos", "Plus");
-
-        for (WebElement menuLink : menuLinks) {
-            WebElement anchor = menuLink.findElement(By.tagName("span"));
-            String txt = anchor.getText();
-            assertThat(links, hasItem(txt));
-        }
-    }
 
     @Test
     public void testNextMeetup() {
         driver.get("https://www.meetup.com/fr-FR/promenades-et-randonnees/");
+
         try {
             WebElement nextMeetup = driver.findElement(By.className("groupHome-eventsList-upcomingEvents"));
             assertTrue(nextMeetup.isDisplayed());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             WebElement empty = driver.findElement(By.className("emptyEventCard"));
             assertTrue(empty.isDisplayed());
         }
         driver.get("https://www.meetup.com/fr-FR/L-Experience-Lab/");
         try {
-            WebElement nextMeetup = driver.findElement(By.className("groupHome-eventsList-upcomingEvents"));
-            assertTrue(nextMeetup.isDisplayed());
-        } catch (Exception e) {
             WebElement empty = driver.findElement(By.className("emptyEventCard"));
             assertTrue(empty.isDisplayed());
+        }
+        catch (Exception e) {
+            WebElement nextMeetup = driver.findElement(By.className("groupHome-eventsList-upcomingEvents"));
+            assertTrue(nextMeetup.isDisplayed());
         }
     }
 
     @Test
-    public void testLogin(){
+    public void testContact() {
+        driver.get("https://www.meetup.com/fr-FR/jeune-randonneurs-franciliens-idf-18-30-ans/");
+        String expectedUrl = "https://secure.meetup.com/fr-FR/login/";
+
+        driver.findElement(By.className("orgInfo-message")).click();
+
+        String redirectUrl = driver.getCurrentUrl();
+        assertTrue(redirectUrl.contains(expectedUrl));
+    }
+
+    @Test
+    public void testLogin() {
         driver.get("https://www.meetup.com/fr-FR/promenades-et-randonnees/");
 
         driver.findElement(By.id("actionButtonLink")).click();
 
-        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(3) > a > div > div:nth-child(2) > span")).getText(),"Continuer avec Facebook");
-        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(4) > a > div > div:nth-child(2) > span")).getText(),"Continuer avec Google");
-        assertEquals(driver.findElement(By.cssSelector("div.signUpModal-wrapper > div:nth-child(5) > a > div > div:nth-child(2) > span")).getText(),"Continue with Apple");
+        assertEquals(driver.findElement(
+                By.cssSelector("div.signUpModal-wrapper > div:nth-child(3) > a > div > div:nth-child(2) > span"))
+                .getText(),"Continuer avec Facebook");
+        assertEquals(driver.findElement(
+                By.cssSelector("div.signUpModal-wrapper > div:nth-child(4) > a > div > div:nth-child(2) > span"))
+                .getText(),"Continuer avec Google");
+        assertEquals(driver.findElement(
+                By.cssSelector("div.signUpModal-wrapper > div:nth-child(5) > a > div > div:nth-child(2) > span"))
+                .getText(),"Continue with Apple");
 
-        String expedctedUrl = "https://secure.meetup.com/fr-FR/register/";
+        String expectedUrl = "https://secure.meetup.com/fr-FR/register/";
         driver.findElement(By.className("signUpModal-email")).click();
         String redirectUrl = driver.getCurrentUrl();
-        assertTrue(redirectUrl.contains(expedctedUrl));
+        assertTrue(redirectUrl.contains(expectedUrl));
     }
-
-    @After
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
-
 }
