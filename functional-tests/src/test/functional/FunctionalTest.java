@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,6 +43,7 @@ public class FunctionalTest {
         String h1 = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[1]/h1/span";
         String subH1 = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[2]/p/span";
         String joinButton = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[3]/a";
+        String description = "/html/head/meta[6]";
 
         driver.get("https://www.meetup.com/fr-FR/");
 		assertEquals(driver.getTitle(), "Partagez vos passions | Meetup");
@@ -51,6 +52,7 @@ public class FunctionalTest {
 		assertEquals(driver.findElement(By.xpath(joinButton)).getCssValue("background"), "rgb(241, 58, 89) none repeat scroll 0% 0% / auto padding-box border-box");
 		assertEquals(driver.findElement(By.xpath(joinButton)).getText(), "Rejoindre Meetup");
 		assertEquals(driver.findElement(By.xpath(joinButton)).getAttribute("href"), "https://www.meetup.com/fr-FR/register/");
+		assertEquals(driver.findElement(By.xpath(description)).getAttribute("content"), "Partagez vos passions et faites bouger votre ville\u00a0! Meetup vous aide à rencontrer des personnes près de chez vous, autour de vos centres d'intérêt.");
     }
 
     @After
