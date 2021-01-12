@@ -1,5 +1,5 @@
-.build/
-.out/
+build/
+out/
 
 # OSX
 .DS_Store
@@ -24,6 +24,9 @@ DerivedData
 
 # Android/IntelliJ
 .idea/
+.idea/*
+.idea/*.xml
+.idea/*.iml
 .gradle
 local.properties
 unit-tests/unit-tests.iml
