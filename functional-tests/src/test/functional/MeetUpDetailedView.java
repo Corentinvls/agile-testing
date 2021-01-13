@@ -50,7 +50,6 @@ public class MeetUpDetailedView {
         String leaderSelector = "div.flex-item.organizedByLabel > a";
         String joinButtonId = "actionButtonLink";
         String imageXpath = "//*[@id=\"mupMain\"]/div[1]/div/section/div/div[1]/div/div/div";
-
         driver.get(url);
         assertTrue(driver.findElement(By.cssSelector(headerSelector)).isEnabled());
         assertTrue(driver.findElement(By.cssSelector(titleSelector)).isEnabled());
