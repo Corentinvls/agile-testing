@@ -1,4 +1,4 @@
-Feature: Fonctionnalités de ma page d'accueil
+Feature: Fonctionnalités de ma page de recherche
 	Scenario: Vérification du titre de l'onglet et du H1
 		Given je suis sur la recherche
 		Then le titre contient "Nature et aventure"

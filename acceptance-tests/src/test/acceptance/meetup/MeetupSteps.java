@@ -1,7 +1,6 @@
 package test.acceptance.meetup;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
@@ -31,7 +30,15 @@ public class MeetupSteps {
 
     @Before
     public void beforeScenario() {
-        System.setProperty("webdriver.chrome.driver", "/Library/Java/JUNIT/chromedriver");
+        String OS = System.getProperty("os.name").toLowerCase();
+
+        System.out.println("OS = " + OS);
+
+        System.setProperty("webdriver.chrome.driver",
+                OS.contains("win") ?
+                        "chromedriver.exe" :
+                        "/Library/Java/JUNIT/chromedriver");
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }

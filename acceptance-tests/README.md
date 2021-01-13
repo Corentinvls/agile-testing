@@ -43,7 +43,7 @@ javac -d ../bin/ test/acceptance/Homepage*.java
 
 ```sh
 cd bin/
-java org.junit.runner.JUnitCore test.acceptance.HomepageTest
+java org.junit.runner.JUnitCore test.acceptance.home.HomepageTest
 ```
 
 ## Enjoy Agile Testing
