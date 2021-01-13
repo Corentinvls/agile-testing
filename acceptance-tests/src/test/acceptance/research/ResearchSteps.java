@@ -1,5 +1,7 @@
 package test.acceptance.research;
 
+
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -13,6 +15,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
@@ -25,6 +29,8 @@ import static org.junit.Assert.assertTrue;
 public class ResearchSteps {
 
 	public static WebDriver driver;
+	private String date;
+
 
 	@Before
 	public void beforeScenario() {
@@ -92,12 +98,10 @@ public class ResearchSteps {
 		WebElement anchor = findOrder.findElement(By.tagName("a"));
 		WebElement span = anchor.findElement(By.tagName("span"));
 		assertEquals(span.getText(), arg0);
-
-		throw new PendingException();
 	}
 
 	@And("^les tris possibles sont$")
-	public void lesTrisPossiblesSont(List<String>tris) {
+	public void lesTrisPossiblesSont(DataTable arg1) {
 		WebElement findOrder = driver.findElement(By.id("simple-find-order"));
 		WebElement ul = findOrder.findElement(By.tagName("ul"));
 		List<WebElement> items = ul.findElements(By.tagName("li"))
@@ -107,11 +111,14 @@ public class ResearchSteps {
 
 		assertEquals(items.size(), 4);
 
+		List<List<String>> rows = arg1.asLists(String.class);
+		List<String> links =new ArrayList<>(rows.get(0)) ; ;
+
 		for (WebElement item : items) {
 			WebElement anchor = item.findElement(By.tagName("a"));
 			String txt = anchor.getAttribute("data-copy");
-			assertThat(tris, hasItem(txt));
-			tris.remove(txt);
+			assertThat(links, hasItem(txt));
+			links.remove(txt);
 		}
 	}
 
@@ -136,8 +143,6 @@ public class ResearchSteps {
 				assertTrue(day <= 31 && day >= 1);
 			}
 		}
-
-		throw new PendingException();
 	}
 
 	@When("^je clique sur le /21 du mois courant$")
@@ -169,6 +174,9 @@ public class ResearchSteps {
 		String xpathListElement = "/html/body/div[3]/div[2]/div/div/div/div[2]/div[1]/ul";
 		List<WebElement> lists = driver.findElement(By.xpath(xpathListElement)).findElements(By.tagName("li"));
 
+
+		date = lists.get(0).getText() + " " + lists.get(0).getAttribute("data-year");
+
 		actions.click(lists.get(1).findElement(By.tagName("a")));
 		actions.build().perform();
 	}
@@ -176,10 +184,6 @@ public class ResearchSteps {
 	@Then("^je suis redirigé vers la page de l'évènement$")
 	public void je_suis_redirige_vers_la_page_de_levenement() {
 		String xpathDate = "/html/body/div[1]/div/div[3]/div/div/div/div[3]/div[3]/main/div[2]/div[1]/div[1]/div/section/div[2]/div/section/div[1]/div/div[2]/div/time/span[1]/span[1]";
-		String xpathListElement = "/html/body/div[3]/div[2]/div/div/div/div[2]/div[1]/ul";
-		List<WebElement> lists = driver.findElement(By.xpath(xpathListElement)).findElements(By.tagName("li"));
-
-		String date = lists.get(0).getText() + " " + lists.get(0).getAttribute("data-year");
 
 		assertEquals(date, driver.findElement(By.xpath(xpathDate)).getText());
 	}
