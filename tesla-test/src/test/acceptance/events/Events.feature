@@ -1,5 +1,36 @@
 Feature: Fonctionnalités de la page évènements
-	Scenario: Vérification du titre et de la description
+	Scenario: Vérification de l'accès à la page évènement depuis le menu de la page d'accueil
 		Given je suis sur la homepage
-		Then le titre doit être "Partagez vos passions | Meetup"
-		And la description contient "Partagez vos passions et faites bouger votre ville"
+		When je clique sur le menu burger
+		When je clique sur le sous-menu "Plus"
+		When je clique sur le lien "Événements"
+		Then je dois arriver sur le page "https://www.tesla.com/fr_FR/events"
+
+	Scenario: Vérification des événements proche du lieu choisi
+		Given je suis sur la page événements
+		When je choisi un lieu dans le monde
+		Then je dois avoir les prochains événements
+
+	Scenario: Vérification des liens afficher tous et plus de resultats
+		Given je suis sur la page événements
+		Then je dois avoir les deux liens
+			|a|b|
+
+	Scenario: Je dois avoir un formulaire d'informations
+		Given je suis sur la page événements
+		Then le formulaire doit contenir
+			|Prenom|Nom|Email|Téléphone|Région|Code postal|Recevoir les News Tesla|
+		And un bouton d'envoi dont le texte est "Suivant"
+		When j'envoi le formulaire sans remplir l'email
+		Then un message rouge apparait en indiquant "obligatoire"
+
+	Scenario: Vérification de la recherche d'événement
+		Given je suis sur la page événements
+		When je recherche "Londres, Royaume-Uni"
+		Then le premier resultat doit être localisé à "Royaume-Uni"
+
+	Scenario: Vérification de l'inscription à un événement
+		Given je suis sur la page événements
+		When je recherche "Japon"
+		When je clique sur un événement
+		Then je suis redirigé vers la page "https://auth.tesla.com/"
