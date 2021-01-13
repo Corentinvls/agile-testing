@@ -8,8 +8,8 @@
 # making sure your site's appearance remains consistent over
 # time.
 #
-# `wraith history configs/history.yaml` # generate base screenshots
-# `wraith latest configs/history.yaml`  #
+# `wraith history configs/historyFix.yaml` # generate base screenshots
+# `wraith latest configs/historyFix.yaml`  #
 #
 ##############################################################
 ##############################################################
@@ -19,12 +19,25 @@ browser: "chrome"
 
 # (required) The domain to take screenshots of.
 domains:
-  french: "https://www.tesla.com/fr_FR/"
+  french: " https://www.tesla.com/fr_FR/"
 
 # (required) The paths to capture. This particular config is using casperjs, so we can take screenshots of selectors rather than the entire page.
 paths:
-  media:
+  sectionIntro:
     path: /
+    selector: ".tcl-hero-parallax__copy"
+  modelS:
+    path: /models
+  roadster:
+    path: /roadster
+  commercial:
+    path: /commercial
+    selector: "#renewable-microgrids"
+  energy:
+    path: /energy
+    selector: "#energy-showcase > div"
+
+
 
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--chrome.js'
@@ -32,14 +45,17 @@ before_capture: 'javascript/wait--chrome.js'
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
   - 320
-  - 600x768
+  - 375
+  - 425
   - 768
   - 1024
   - 1280
+  - 1920
+  - 2560
 
 
 # (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
-resize_or_reload: 'resize'
+resize_or_reload: 'reload'
 
 # (required for history mode, otherwise optional) The directory that your base screenshots will be stored in.
 history_dir: 'shots_base'
@@ -56,7 +72,7 @@ threshold: 3
 # (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
 gallery:
   template: 'slideshow_template' # Examples: 'basic_template' (default), 'slideshow_template'
-  thumb_width:  200
+  thumb_width: 200
   thumb_height: 200
 
 # (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
