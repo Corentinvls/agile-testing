@@ -24,7 +24,15 @@ public class JobsSteps {
 
 	@Before
 	public void beforeScenario() {
-		System.setProperty("webdriver.chrome.driver","/Library/Java/JUNIT/chromedriver");
+		String OS = System.getProperty("os.name").toLowerCase();
+
+		System.out.println("OS = " + OS);
+
+		System.setProperty("webdriver.chrome.driver",
+				OS.contains("win") ?
+						"chromedriver.exe" :
+						"/Library/Java/JUNIT/chromedriver");
+		
 		driver = new ChromeDriver();
 		// Seems no more working in last Chrome versions
 		// driver.manage().window().maximize();
