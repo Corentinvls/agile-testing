@@ -1,0 +1,7 @@
+
+*.iml
+*.xml
+*.exe
+*.class
+*.patch
+out/*
