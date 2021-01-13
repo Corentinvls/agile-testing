@@ -1,5 +1,6 @@
 package test.acceptance.research;
 
+
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +30,7 @@ public class ResearchSteps {
 
 	public static WebDriver driver;
 	private String date;
+
 
 	@Before
 	public void beforeScenario() {
@@ -170,6 +173,7 @@ public class ResearchSteps {
 
 		String xpathListElement = "/html/body/div[3]/div[2]/div/div/div/div[2]/div[1]/ul";
 		List<WebElement> lists = driver.findElement(By.xpath(xpathListElement)).findElements(By.tagName("li"));
+
 
 		date = lists.get(0).getText() + " " + lists.get(0).getAttribute("data-year");
 
