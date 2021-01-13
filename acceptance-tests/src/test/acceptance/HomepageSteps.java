@@ -27,10 +27,17 @@ public class HomepageSteps {
 
 	@Before
 	public void beforeScenario() {
-		System.setProperty("webdriver.chrome.driver","/Library/Java/JUNIT/chromedriver");
+		String OS = System.getProperty("os.name").toLowerCase();
+
+		System.out.println("OS = " + OS);
+
+		System.setProperty("webdriver.chrome.driver",
+				OS.contains("win") ?
+						"chromedriver.exe" :
+						"/Library/Java/JUNIT/chromedriver");
+
 		driver = new ChromeDriver();
-		// Seems no more working in last Chrome versions
-		// driver.manage().window().maximize();
+
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
@@ -46,10 +53,42 @@ public class HomepageSteps {
 
 	@Then("^la description contient \"([^\"]*)\"$")
 	public void la_description_doit_être(String arg1) throws Throwable {
-		// By CSS Selector
 		assertTrue(driver.findElement(By.cssSelector("meta[name='description']")).getAttribute("content").contains(arg1));
-		// By XPATH, si vous préférez...
-	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
+	}
+
+	@Then("^La punchline doit être \"([^\"]*)\"$")
+	public void la_punchline_doit_être(String arg1) throws Throwable {
+		String h1 = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[1]/h1/span";
+
+		assertEquals(driver.findElement(By.xpath(h1)).getText(), arg1);
+	}
+
+	@Then("^La sous-punchline doit être \"([^\"]*)\"$")
+	public void la_sous_punchline_doit_être(String arg1) throws Throwable {
+		String subH1 = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[2]/p/span";
+
+		assertEquals(driver.findElement(By.xpath(subH1)).getText(), arg1);
+	}
+
+	@Then("^Le bouton doit être \"([^\"]*)\"$")
+	public void le_bouton_doit_être(String arg1) throws Throwable {
+		String joinButton = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[3]/a";
+
+		assertEquals(driver.findElement(By.xpath(joinButton)).getCssValue("background"), arg1);
+	}
+
+	@Then("^Le bouton doit avoir ecrit \"([^\"]*)\"$")
+	public void le_bouton_doit_avoir_ecrit(String arg1) throws Throwable {
+		String joinButton = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[3]/a";
+
+		assertEquals(driver.findElement(By.xpath(joinButton)).getText(), arg1);
+	}
+
+	@Then("^Le bouton doit contenir le lien \"([^\"]*)\"$")
+	public void le_bouton_doit_contenir_le_lien(String arg1) throws Throwable {
+		String joinButton = "/html/body/div[1]/div/div[5]/div[3]/main/div[1]/div/section/div/div[3]/a";
+
+		assertEquals(driver.findElement(By.xpath(joinButton)).getAttribute("href"), arg1);
 	}
 
 	@After
