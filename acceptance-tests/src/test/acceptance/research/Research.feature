@@ -15,7 +15,7 @@ Feature: Fonctionnalités de ma page d'accueil
 		Given je suis sur la recherche
 		Then le tri par défaut est "pertinence"
 		And les tris possibles sont
-			|pertinence, plus récents, nombre de membres, proximité|
+			| pertinence | plus récents | nombre de membres | proximité |
 
 	Scenario: Vérification du clique sur le choix calendrier
 		Given je suis sur la recherche
