@@ -9,10 +9,11 @@
 ##############################################################
 
 
+
 # Add as many domains as necessary. Key will act as a label
 domains:
-  my_site:       "http://www.example.com"
-  my_other_site: "http://www.test.example.com"
+  tesla:       "https://www.tesla.com/fr_FR/"
+
 
 # Notice the absence of a `paths` property. When no paths are provided, Wraith defaults to
 # spidering mode to check your entire website.
@@ -25,7 +26,7 @@ spider_skips:
   - !ruby/regexp /^\/baz\// # Matches any URLs that start with /baz
 
 # the filename of the spider file to use. Default: spider.txt
-spider_file: example_com_spider.txt
+spider_file: tesla_spider.txt
 
 # the number of days to keep the site spider file
 spider_days: 10

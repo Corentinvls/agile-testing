@@ -1,4 +1,4 @@
-package test.acceptance;
+package test.acceptance.home;
 
 import org.junit.runner.RunWith;
 
