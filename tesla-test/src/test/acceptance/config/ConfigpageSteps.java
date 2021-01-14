@@ -170,7 +170,7 @@ public class ConfigpageSteps {
 
 	@After
 	public void afterScenario() {
-//		driver.quit();
+		driver.quit();
 	}
 
 }
