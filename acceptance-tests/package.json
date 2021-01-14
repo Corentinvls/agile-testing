@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "scripts": {
+    "start": "node generateReport.js"
+  }
+}

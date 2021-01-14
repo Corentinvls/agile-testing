@@ -31,6 +31,7 @@ DerivedData
 local.properties
 unit-tests/unit-tests.iml
 /acceptance-tests/acceptance-tests.iml
+/acceptance-tests/node_modules
 /functional-tests/functional-tests.iml
 /pixelperfect-test/pixelperfect-tests.iml
 /unit-tests/unit-tests.iml

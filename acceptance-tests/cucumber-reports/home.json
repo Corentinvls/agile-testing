@@ -1,0 +1,270 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2200778068,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Vérification du titre et de la description",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-titre-et-de-la-description",
+        "after": [
+          {
+            "result": {
+              "duration": 107701729,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6010080551,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la homepage",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13311336,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "le titre doit être \"Partagez vos passions | Meetup\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Partagez vos passions | Meetup",
+                  "offset": 20
+                }
+              ],
+              "location": "HomepageSteps.le_titre_doit_être(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 111343135,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "la description contient \"Partagez vos passions et faites bouger votre ville\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Partagez vos passions et faites bouger votre ville",
+                  "offset": 25
+                }
+              ],
+              "location": "HomepageSteps.la_description_doit_être(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1123389657,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Vérification de la punchline et sous-punchline du site",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-de-la-punchline-et-sous-punchline-du-site",
+        "after": [
+          {
+            "result": {
+              "duration": 128060775,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3467407283,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "je suis sur la homepage",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24710035,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "La punchline doit être \"Le monde vous tend les bras\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Le monde vous tend les bras",
+                  "offset": 24
+                }
+              ],
+              "location": "HomepageSteps.la_punchline_doit_être(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21711139,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "La sous-punchline doit être \"Rejoignez un groupe local pour rencontrer du monde, tester une nouvelle activité ou partager vos passions.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rejoignez un groupe local pour rencontrer du monde, tester une nouvelle activité ou partager vos passions.",
+                  "offset": 29
+                }
+              ],
+              "location": "HomepageSteps.la_sous_punchline_doit_être(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1304561671,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Vérification du bouton d\u0027inscription rouge",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-bouton-d\u0027inscription-rouge",
+        "after": [
+          {
+            "result": {
+              "duration": 124616858,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4160494274,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "je suis sur la homepage",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 27268487,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Le bouton doit être \"rgb(241, 58, 89) none repeat scroll 0% 0% / auto padding-box border-box\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "rgb(241, 58, 89) none repeat scroll 0% 0% / auto padding-box border-box",
+                  "offset": 21
+                }
+              ],
+              "location": "HomepageSteps.le_bouton_doit_être(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30065504,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Le bouton doit avoir ecrit \"Rejoindre Meetup\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rejoindre Meetup",
+                  "offset": 28
+                }
+              ],
+              "location": "HomepageSteps.le_bouton_doit_avoir_ecrit(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17341111,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Le bouton doit contenir le lien \"https://www.meetup.com/fr-FR/register/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/fr-FR/register/",
+                  "offset": 33
+                }
+              ],
+              "location": "HomepageSteps.le_bouton_doit_contenir_le_lien(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de ma page d\u0027accueil",
+    "description": "",
+    "id": "fonctionnalités-de-ma-page-d\u0027accueil",
+    "keyword": "Feature",
+    "uri": "Homepage.feature"
+  }
+]

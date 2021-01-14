@@ -1,0 +1,511 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1117964800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Vérification du Header",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-du-header",
+        "after": [
+          {
+            "result": {
+              "duration": 127950982,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3521104854,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je suis sur une page meetup",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetup()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 182449673,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "le titre doit etre cliquable avec le nom du meetup",
+            "match": {
+              "location": "MeetupSteps.leTitreDoitEtreCliquableAvecLeNomDuMeetup()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18296311,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "un lieu",
+            "match": {
+              "location": "MeetupSteps.unLieu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21606519,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "le total des membres",
+            "match": {
+              "location": "MeetupSteps.leTotalDesMembres()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29306228,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "les organisateurs",
+            "match": {
+              "location": "MeetupSteps.lesOrganisateurs()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 38298978,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "un bouton avec un label \"Rejoindre ce groupe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Rejoindre ce groupe",
+                  "offset": 25
+                }
+              ],
+              "location": "MeetupSteps.unBoutonAvecUnLabel(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19518932,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "une photo de presentation.",
+            "match": {
+              "location": "MeetupSteps.unePhotoDePresentation()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1301091479,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Vérification du stripe",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-du-stripe",
+        "after": [
+          {
+            "result": {
+              "duration": 119005091,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2710638939,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "je suis sur une page meetup",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetup()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1009387967,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "La fiche doit contenir un bandeau d\u0027onglets avec les bouttons suivant",
+            "match": {
+              "location": "MeetupSteps.la_fiche_doit_contenir_un_bandeau_d_onglets_avec_les_bouttons_suivant(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Événements",
+                  "Photos",
+                  "Membres",
+                  "Discussions",
+                  "À propos",
+                  "Plus"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1064954725,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Vérification des Buttons voir tout",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-des-buttons-voir-tout",
+        "after": [
+          {
+            "result": {
+              "duration": 126016855,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4169985644,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "je suis sur une page meetup",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetup()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 261825638,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "La page doit contenir les quatre liens \"Voir tout\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Voir tout",
+                  "offset": 40
+                }
+              ],
+              "location": "MeetupSteps.laPageDoitContenirLesQuatreLiens(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1223445597,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Vérification du signalement evenement a venir",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-du-signalement-evenement-a-venir",
+        "after": [
+          {
+            "result": {
+              "duration": 134626334,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5161628546,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "je suis sur une page meetup avec un evenement a venir",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetupAvecUnEvenementAVenir()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 177788262,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "La page doit contenir une card pour le meetup a venir ou un signalement aucun evenement",
+            "match": {
+              "location": "MeetupSteps.laPageDoitContenirUneCardPourLeMeetupAVenirOuUnSignalementAucunEvenement()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1060398657,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Vérification pour rejoindre un groupe",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-pour-rejoindre-un-groupe",
+        "after": [
+          {
+            "result": {
+              "duration": 137836745,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3377981009,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "je suis sur une page meetup",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetup()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 469358705,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "je clicke sur le bouton Rejoindre",
+            "match": {
+              "location": "MeetupSteps.jeClickeSurLeBoutonRejoindre()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 53725808,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "je dois pouvoir m\u0027identifier avec un lien \"https://www.meetup.com/fr-FR/login/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/fr-FR/login/",
+                  "offset": 43
+                }
+              ],
+              "location": "MeetupSteps.jeDoisPouvoirMIdentifierAvecUnLien(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45543495,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "je dois pouvoir me connecter avec facebook ou google",
+            "match": {
+              "location": "MeetupSteps.jeDoisPouvoirMeConnecterAvecFacebookOuGoogle()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1298767408,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "je peux aussi clicke sur m\u0027inscrire",
+            "match": {
+              "location": "MeetupSteps.jePeuxAussiClickeSurMInscrire()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4169677,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "etre rediriger vers \"https://secure.meetup.com/fr-FR/register/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://secure.meetup.com/fr-FR/register/",
+                  "offset": 21
+                }
+              ],
+              "location": "MeetupSteps.etreRedirigerVers(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1293361638,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Vérification contacter l\u0027organisateur",
+        "description": "",
+        "id": "fonctionnalités-de-la-fiche-meetup;vérification-contacter-l\u0027organisateur",
+        "after": [
+          {
+            "result": {
+              "duration": 135114878,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MeetupSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9847870633,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "je suis sur une page meetup",
+            "match": {
+              "location": "MeetupSteps.jeSuisSurUnePageMeetup()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1634325786,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "je clicke sur le boutton contacter",
+            "match": {
+              "location": "MeetupSteps.jeClickeSurLeBouttonContacter()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5894629,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "je dois etre rediriger sur \"https://secure.meetup.com/fr-FR/login/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://secure.meetup.com/fr-FR/login/",
+                  "offset": 28
+                }
+              ],
+              "location": "MeetupSteps.jeDoisEtreRedirigerSur(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de la fiche meetup",
+    "description": "",
+    "id": "fonctionnalités-de-la-fiche-meetup",
+    "keyword": "Feature",
+    "uri": "Meetup.feature"
+  }
+]
