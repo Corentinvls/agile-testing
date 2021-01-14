@@ -7,7 +7,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,10 +35,8 @@ public class FeaturePageSteps {
 						"chromedriver.exe" :
 						"/Library/Java/JUNIT/chromedriver");
 
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-		driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().setSize(new Dimension(1920, 1080));
 

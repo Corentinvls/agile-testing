@@ -7,9 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/acceptance/events"}, // ou se situe votre fichier .feature
-		plugin = { "pretty", "json:cucumber-reports/events.json" }
-)
+	features = {"src/test/acceptance/events"}, // ou se situe votre fichier .feature
+	plugin = {"pretty", "json:cucumber-reports/events.json"}
+	)
 public class EventsTest {
 
 }

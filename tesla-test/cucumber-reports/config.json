@@ -1,0 +1,604 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4293274485,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Vérification du prix LOA de la Model S",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s;vérification-du-prix-loa-de-la-model-s",
+        "after": [
+          {
+            "result": {
+              "duration": 319793464,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5819742867,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la page configurateur",
+            "match": {
+              "location": "ConfigpageSteps.je_suis_sur_la_page_configurateur()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 410862483,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je clique sur le bouton commander",
+            "match": {
+              "location": "ConfigpageSteps.je_clique_sur_le_bouton_commander()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10645594257,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c.../fr_fr/models/design[#battery]\u003e but was:\u003c.../fr_fr/models/design[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat test.acceptance.config.ConfigpageSteps.l_url_de_la_page_doit_être(ConfigpageSteps.java:67)\n\tat ✽.Then l\u0027url de la page doit être \"https://www.tesla.com/fr_fr/models/design#battery\"(Configpage.feature:5)\n",
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "l\u0027url de la page doit être \"https://www.tesla.com/fr_fr/models/design#battery\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.tesla.com/fr_fr/models/design#battery",
+                  "offset": 28
+                }
+              ],
+              "location": "ConfigpageSteps.l_url_de_la_page_doit_être(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "le prix affiché est un prix \"LOA\" avec \"A partir de 768 € /mois*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LOA",
+                  "offset": 29
+                },
+                {
+                  "val": "A partir de 768 € /mois*",
+                  "offset": 40
+                }
+              ],
+              "location": "ConfigpageSteps.le_prix_affiché_est_un_prix_avec(String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2106215581,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Vérification du prix LOA du Grande Autonomie Plus ou Performance",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s;vérification-du-prix-loa-du-grande-autonomie-plus-ou-performance;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 273432830,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16765307889,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "je suis sur la page configurateur",
+            "match": {
+              "location": "ConfigpageSteps.je_suis_sur_la_page_configurateur()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 375428475,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "je clique sur le bouton commander",
+            "match": {
+              "location": "ConfigpageSteps.je_clique_sur_le_bouton_commander()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12144462968,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "je sélectionne le modèle \"Grande Autonomie Plus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Grande Autonomie Plus",
+                  "offset": 26
+                }
+              ],
+              "location": "ConfigpageSteps.je_sélectionne_le_modèle(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164202499,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "le prix affiché est un prix \"LOA\" avec \"A partir de 768 € /mois*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LOA",
+                  "offset": 29
+                },
+                {
+                  "val": "A partir de 768 € /mois*",
+                  "offset": 40
+                }
+              ],
+              "location": "ConfigpageSteps.le_prix_affiché_est_un_prix_avec(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90017025,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "une économies de carburant estimées avec \"A partir de - 108 € /mois\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "A partir de - 108 € /mois",
+                  "offset": 42
+                }
+              ],
+              "location": "ConfigpageSteps.une_économies_de_carburant_estimées_avec(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 560995100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "un montant total avec achat au terme du contrat de \"94 841 €\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "94 841 €",
+                  "offset": 52
+                }
+              ],
+              "location": "ConfigpageSteps.un_montant_total_avec_achat_au_terme_du_contrat_de(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2097344320,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Vérification du prix LOA du Grande Autonomie Plus ou Performance",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s;vérification-du-prix-loa-du-grande-autonomie-plus-ou-performance;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 266350491,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8808118045,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "je suis sur la page configurateur",
+            "match": {
+              "location": "ConfigpageSteps.je_suis_sur_la_page_configurateur()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 378156356,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "je clique sur le bouton commander",
+            "match": {
+              "location": "ConfigpageSteps.je_clique_sur_le_bouton_commander()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14630137642,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "je sélectionne le modèle \"Performance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Performance",
+                  "offset": 26
+                }
+              ],
+              "location": "ConfigpageSteps.je_sélectionne_le_modèle(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 300112602,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "le prix affiché est un prix \"LOA\" avec \"A partir de 969 € /mois*\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LOA",
+                  "offset": 29
+                },
+                {
+                  "val": "A partir de 969 € /mois*",
+                  "offset": 40
+                }
+              ],
+              "location": "ConfigpageSteps.le_prix_affiché_est_un_prix_avec(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 69459751,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "une économies de carburant estimées avec \"A partir de - 108 € /mois\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "A partir de - 108 € /mois",
+                  "offset": 42
+                }
+              ],
+              "location": "ConfigpageSteps.une_économies_de_carburant_estimées_avec(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 313798357,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "un montant total avec achat au terme du contrat de \"114 052 €\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "114 052 €",
+                  "offset": 52
+                }
+              ],
+              "location": "ConfigpageSteps.un_montant_total_avec_achat_au_terme_du_contrat_de(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1921813189,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Vérification augmentation du prix LOA pour la conduite autonome",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s;vérification-augmentation-du-prix-loa-pour-la-conduite-autonome",
+        "after": [
+          {
+            "result": {
+              "duration": 292991405,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6643046100,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "je suis sur la page configurateur",
+            "match": {
+              "location": "ConfigpageSteps.je_suis_sur_la_page_configurateur()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 326435993,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "je clique sur le bouton commander",
+            "match": {
+              "location": "ConfigpageSteps.je_clique_sur_le_bouton_commander()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11465918147,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "je sélectionne le modèle \"Performance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Performance",
+                  "offset": 26
+                }
+              ],
+              "location": "ConfigpageSteps.je_sélectionne_le_modèle(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2748833030,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "je veux la capacité de conduite entièrement autonome",
+            "match": {
+              "location": "ConfigpageSteps.je_veux_la_capacité_de_conduite_entièrement_autonome()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1411239,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "le prix augmente de 89 €/mois",
+            "match": {
+              "arguments": [
+                {
+                  "val": "89",
+                  "offset": 20
+                }
+              ],
+              "location": "ConfigpageSteps.le_prix_augmente_de_€_mois(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2388754437,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Localisation des points de vente",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s;localisation-des-points-de-vente",
+        "after": [
+          {
+            "result": {
+              "duration": 440040072,
+              "status": "passed"
+            },
+            "match": {
+              "location": "ConfigpageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10494479896,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "je suis sur la page configurateur",
+            "match": {
+              "location": "ConfigpageSteps.je_suis_sur_la_page_configurateur()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 489454546,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "je clique sur le bouton commander",
+            "match": {
+              "location": "ConfigpageSteps.je_clique_sur_le_bouton_commander()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13544098457,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "je sélectionne le modèle \"Performance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Performance",
+                  "offset": 26
+                }
+              ],
+              "location": "ConfigpageSteps.je_sélectionne_le_modèle(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11664108869,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "je navique et click sur le lien Localisation",
+            "match": {
+              "location": "ConfigpageSteps.je_navique_et_click_sur_le_lien_Localisation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51195499,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "l\u0027url de la page doit être \"https://www.tesla.com/fr_FR/findus/list\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.tesla.com/fr_FR/findus/list",
+                  "offset": 28
+                }
+              ],
+              "location": "ConfigpageSteps.l_url_de_la_page_doit_être(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de la page configurateur Tesla Model S",
+    "description": "",
+    "id": "fonctionnalités-de-la-page-configurateur-tesla-model-s",
+    "keyword": "Feature",
+    "uri": "Configpage.feature"
+  }
+]

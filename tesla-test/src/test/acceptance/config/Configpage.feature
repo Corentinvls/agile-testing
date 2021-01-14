@@ -2,7 +2,7 @@ Feature: Fonctionnalités de la page configurateur Tesla Model S
 	Scenario: Vérification du prix LOA de la Model S
 		Given je suis sur la page configurateur
 		When je clique sur le bouton commander
-		Then l'url de la page doit être "https://www.tesla.com/fr_fr/models/design#battery"
+		Then l'url de la page doit être "https://www.tesla.com/fr_fr/models/design"
 		And le prix affiché est un prix "LOA" avec "A partir de 768 € /mois*"
 
 	Scenario Outline: Vérification du prix LOA du Grande Autonomie Plus ou Performance

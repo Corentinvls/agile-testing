@@ -1,0 +1,740 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3227472630,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Vérification du titre",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-titre",
+        "after": [
+          {
+            "result": {
+              "duration": 217722728,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2638746052,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 66197533,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "le titre doit etre \"Voitures électriques, énergie solaire et propre | Tesla France\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Voitures électriques, énergie solaire et propre | Tesla France",
+                  "offset": 20
+                }
+              ],
+              "location": "HomepageSteps.le_titre_doit_etre(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2273596142,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Vérification de la description",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-de-la-description",
+        "after": [
+          {
+            "result": {
+              "duration": 366795851,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5421393334,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 59320798,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "la description doit etre \"Tesla accélère la transition mondiale vers une énergie durable en proposant des véhicules électriques, des panneaux solaires et des solutions intégrées d\u0027énergie renouvelable pour les particuliers et les entreprises.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tesla accélère la transition mondiale vers une énergie durable en proposant des véhicules électriques, des panneaux solaires et des solutions intégrées d\u0027énergie renouvelable pour les particuliers et les entreprises.",
+                  "offset": 26
+                }
+              ],
+              "location": "HomepageSteps.la_description_doit_etre(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1894056186,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Vérification des punchlines",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-des-punchlines",
+        "after": [
+          {
+            "result": {
+              "duration": 183306978,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7873052624,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3170292239,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "la page contient plusieurs punchlines qui doivent etre",
+            "match": {
+              "location": "HomepageSteps.la_page_contient_plusieurs_punchlines_qui_doivent_etre(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Model 3",
+                  "Model S",
+                  "Model X",
+                  "Model Y",
+                  "Systèmes d\u0027énergie solaire et Powerwalls"
+                ],
+                "line": 13
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2058068408,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 218796410,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6337657349,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 125854082,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 0 du menu doit etre \"Model S\" et redirige vers \"https://www.tesla.com/fr_fr/models\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 7
+                },
+                {
+                  "val": "Model S",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/models",
+                  "offset": 55
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1787036518,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 212393988,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5548525520,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 91355353,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 1 du menu doit etre \"Model 3\" et redirige vers \"https://www.tesla.com/fr_fr/model3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                },
+                {
+                  "val": "Model 3",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/model3",
+                  "offset": 55
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2052692039,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 303559293,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8605320724,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113599590,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 2 du menu doit etre \"Model X\" et redirige vers \"https://www.tesla.com/fr_fr/modelx\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 7
+                },
+                {
+                  "val": "Model X",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/modelx",
+                  "offset": 55
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1920057110,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 199608488,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10097317846,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 142466029,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 3 du menu doit etre \"Model Y\" et redirige vers \"https://www.tesla.com/fr_fr/modely\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 7
+                },
+                {
+                  "val": "Model Y",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/modely",
+                  "offset": 55
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1850033613,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 208245234,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11220311935,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 104635944,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 4 du menu doit etre \"Powerwall\" et redirige vers \"https://www.tesla.com/fr_fr/powerwall\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 7
+                },
+                {
+                  "val": "Powerwall",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/powerwall",
+                  "offset": 57
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2209284153,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Vérification du menu de navigation principal",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-de-navigation-principal;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 271260195,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 15990682115,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 99034051,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "l\u0027item 5 du menu doit etre \"Recharger\" et redirige vers \"https://www.tesla.com/fr_fr/charging\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 7
+                },
+                {
+                  "val": "Recharger",
+                  "offset": 28
+                },
+                {
+                  "val": "https://www.tesla.com/fr_fr/charging",
+                  "offset": 57
+                }
+              ],
+              "location": "HomepageSteps.l_item_du_menu_doit_etre_et_redirige_vers(int,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1975410697,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Vérification du menu burger",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-d\u0027accueil;vérification-du-menu-burger",
+        "after": [
+          {
+            "result": {
+              "duration": 276586421,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomepageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12798614133,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "je suis sur la page d\u0027accueil",
+            "match": {
+              "location": "HomepageSteps.je_suis_sur_la_page_d_accueil()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 238136604,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "je clique sur le menu burger",
+            "match": {
+              "location": "HomepageSteps.je_clique_sur_le_menu_burger()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 640116404,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "le menu contient",
+            "match": {
+              "location": "HomepageSteps.le_menu_contient(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Véhicules disponibles",
+                  "Véhicules d\u0027occasion",
+                  "Reprise",
+                  "Cybertruck",
+                  "Roadster",
+                  "Énergie",
+                  "Essais",
+                  "Flottes \u0026amp; Entreprises",
+                  "Nous trouver",
+                  "Événements",
+                  "Assistance"
+                ],
+                "line": 31
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de ma page d\u0027accueil",
+    "description": "",
+    "id": "fonctionnalités-de-ma-page-d\u0027accueil",
+    "keyword": "Feature",
+    "uri": "Homepage.feature"
+  }
+]

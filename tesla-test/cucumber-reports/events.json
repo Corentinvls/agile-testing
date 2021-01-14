@@ -1,0 +1,503 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3194431199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Vérification de l\u0027accès à la page évènement depuis le menu de la page d\u0027accueil",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;vérification-de-l\u0027accès-à-la-page-évènement-depuis-le-menu-de-la-page-d\u0027accueil",
+        "after": [
+          {
+            "result": {
+              "duration": 314738831,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5405214566,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la homepage",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8696040914,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je clique sur le menu burger puis le plus puis événements",
+            "match": {
+              "location": "EventsSteps.je_clique_sur_le_menu_burger_puis_le_plus_puis_événements()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33565579,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "je dois arriver sur le page \"https://www.tesla.com/fr_FR/events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.tesla.com/fr_FR/events",
+                  "offset": 29
+                }
+              ],
+              "location": "EventsSteps.je_dois_arriver_sur_le_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1874257226,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Vérification des événements proche du lieu choisi",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;vérification-des-événements-proche-du-lieu-choisi",
+        "after": [
+          {
+            "result": {
+              "duration": 237409131,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2392851114,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "je suis sur la page événements",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_page_événements()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6314990012,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "je choisi un lieu dans le monde",
+            "match": {
+              "location": "EventsSteps.je_choisi_un_lieu_dans_le_monde()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5093207487,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "je dois avoir les prochains événements",
+            "match": {
+              "location": "EventsSteps.je_dois_avoir_les_prochains_événements()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1787960794,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Vérification des liens afficher tous et plus de resultats",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;vérification-des-liens-afficher-tous-et-plus-de-resultats",
+        "after": [
+          {
+            "result": {
+              "duration": 195739472,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3360079200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "je suis sur la page événements",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_page_événements()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 93116003,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "je dois avoir les deux liens",
+            "match": {
+              "location": "EventsSteps.je_dois_avoir_les_deux_liens(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Voir tous les événements",
+                  "AFFICHER PLUS"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1878541160,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Je dois avoir un formulaire d\u0027informations",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;je-dois-avoir-un-formulaire-d\u0027informations",
+        "after": [
+          {
+            "result": {
+              "duration": 264292089,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3671679977,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "je suis sur la page événements",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_page_événements()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 201182798,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "le formulaire doit contenir",
+            "match": {
+              "location": "EventsSteps.le_formulaire_doit_contenir(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname_td",
+                  "lastname_td",
+                  "usermail_td",
+                  "phonenumber_td",
+                  "countries_td",
+                  "zipcode_td",
+                  "updates_opt_in_td"
+                ],
+                "line": 20
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21399426,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "un bouton d\u0027envoi dont le texte est \"Suivant\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Suivant",
+                  "offset": 37
+                }
+              ],
+              "location": "EventsSteps.un_bouton_d_envoi_dont_le_texte_est(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3569740768,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "j\u0027envoi le formulaire sans remplir l\u0027email",
+            "match": {
+              "location": "EventsSteps.j_envoi_le_formulaire_sans_remplir_l_email()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 81613501,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "un message rouge apparait en indiquant \"obligatoire\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "obligatoire",
+                  "offset": 40
+                }
+              ],
+              "location": "EventsSteps.un_message_rouge_apparait_en_indiquant(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1848012717,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Vérification de la recherche d\u0027événement",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;vérification-de-la-recherche-d\u0027événement",
+        "after": [
+          {
+            "result": {
+              "duration": 289517787,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3997581058,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "je suis sur la page événements",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_page_événements()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10786589624,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "je recherche \"Londres, Royaume-Uni\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Londres, Royaume-Uni",
+                  "offset": 14
+                }
+              ],
+              "location": "EventsSteps.je_recherche(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3023951788,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "le premier resultat doit être localisé à \"Royaume-Uni\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Royaume-Uni",
+                  "offset": 42
+                }
+              ],
+              "location": "EventsSteps.le_premier_resultat_doit_être_localisé_à(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 30,
+            "value": "#J\u0027ai du mettre Londres car aucun événement a venir sur Tokyo"
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 2258884069,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Vérification de l\u0027inscription à un événement",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-évènements;vérification-de-l\u0027inscription-à-un-événement",
+        "after": [
+          {
+            "result": {
+              "duration": 141528622,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EventsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3751863255,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "je suis sur la page événements",
+            "match": {
+              "location": "EventsSteps.je_suis_sur_la_page_événements()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9377561626,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "je recherche et clique sur un événement \"Londres\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Londres",
+                  "offset": 41
+                }
+              ],
+              "location": "EventsSteps.je_recherche_et_clique_sur_un_événement(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3013346492,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "je suis redirigé vers la page \"https://auth.tesla.com/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://auth.tesla.com/",
+                  "offset": 31
+                }
+              ],
+              "location": "EventsSteps.je_suis_redirigé_vers_la_page(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de la page évènements",
+    "description": "",
+    "id": "fonctionnalités-de-la-page-évènements",
+    "keyword": "Feature",
+    "uri": "Events.feature"
+  }
+]

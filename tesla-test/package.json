@@ -3,6 +3,6 @@
     "multiple-cucumber-html-reporter": "^1.18.0"
   },
   "scripts": {
-    "start": "node generateReport.js"
+    "start": "node generateReport.js && open reportPretty/index.html"
   }
 }

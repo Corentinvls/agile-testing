@@ -8,7 +8,6 @@ import cucumber.api.java.en.When;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
@@ -32,11 +31,7 @@ public class ConfigpageSteps {
 				OS.contains("win") ?
 						"chromedriver.exe" :
 						"/Library/Java/JUNIT/chromedriver");
-
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-
-		driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().setSize(new Dimension(1920, 1080));
 

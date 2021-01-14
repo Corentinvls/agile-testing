@@ -1,0 +1,432 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3108481108,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Vérification des différents caractétisque de la model 3",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-model;vérification-des-différents-caractétisque-de-la-model-3;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 333737696,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5127787461,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la page model",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_la_page_model()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 994368085,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je suis sur l\u0027onglet caractéristique",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_l_onglet_caractéristique()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1829540924,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que je selectionne la \"Performance\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Performance",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.que_je_selectionne_la(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 206033325,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "le poids doit etre \"1,844 kg\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1,844 kg",
+                  "offset": 20
+                }
+              ],
+              "location": "FeaturePageSteps.le_poids_doit_etre(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 121307769,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "l\u0027accéleration doit etre \"0 à 100 km/h en 3,3 secondes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0 à 100 km/h en 3,3 secondes",
+                  "offset": 26
+                }
+              ],
+              "location": "FeaturePageSteps.l_accéleration_doit_etre(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 147945164,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "l\u0027autonomie doit etre \"567 km\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "567 km",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.l_autonomie_doit_etre(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2647826272,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Vérification des différents caractétisque de la model 3",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-model;vérification-des-différents-caractétisque-de-la-model-3;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 223776064,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3518756881,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la page model",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_la_page_model()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 971351963,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je suis sur l\u0027onglet caractéristique",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_l_onglet_caractéristique()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1844750470,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que je selectionne la \"Grande Automonie AWD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Grande Automonie AWD",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.que_je_selectionne_la(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 381349136,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "le poids doit etre \"1,844 kg\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1,844 kg",
+                  "offset": 20
+                }
+              ],
+              "location": "FeaturePageSteps.le_poids_doit_etre(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 167195823,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "l\u0027accéleration doit etre \"0 à 100 km/h en 4,4 secondes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0 à 100 km/h en 4,4 secondes",
+                  "offset": 26
+                }
+              ],
+              "location": "FeaturePageSteps.l_accéleration_doit_etre(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67317431,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "l\u0027autonomie doit etre \"580 km\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "580 km",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.l_autonomie_doit_etre(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1941653864,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Vérification des différents caractétisque de la model 3",
+        "description": "",
+        "id": "fonctionnalités-de-la-page-model;vérification-des-différents-caractétisque-de-la-model-3;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 296792071,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FeaturePageSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3812123884,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur la page model",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_la_page_model()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1096987438,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "je suis sur l\u0027onglet caractéristique",
+            "match": {
+              "location": "FeaturePageSteps.je_suis_sur_l_onglet_caractéristique()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2033551004,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que je selectionne la \"Standard Plus\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Standard Plus",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.que_je_selectionne_la(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 287398688,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "le poids doit etre \"1,745 kg\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1,745 kg",
+                  "offset": 20
+                }
+              ],
+              "location": "FeaturePageSteps.le_poids_doit_etre(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 68991704,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "l\u0027accéleration doit etre \"0 à 100 km/h en 5,6 secondes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0 à 100 km/h en 5,6 secondes",
+                  "offset": 26
+                }
+              ],
+              "location": "FeaturePageSteps.l_accéleration_doit_etre(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51074683,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "l\u0027autonomie doit etre \"430 km\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "430 km",
+                  "offset": 23
+                }
+              ],
+              "location": "FeaturePageSteps.l_autonomie_doit_etre(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de la page model",
+    "description": "",
+    "id": "fonctionnalités-de-la-page-model",
+    "keyword": "Feature",
+    "uri": "FetaurePage.feature"
+  }
+]

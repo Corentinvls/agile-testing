@@ -40,10 +40,8 @@ public class EventsSteps {
 						"chromedriver.exe" :
 						"/Library/Java/JUNIT/chromedriver");
 
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
-
-		driver = new ChromeDriver(chromeOptions);
+;
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().setSize(new Dimension(1920, 1080));
 
@@ -62,10 +60,10 @@ public class EventsSteps {
 
 	@When("^je clique sur le menu burger puis le plus puis événements$")
 	public void je_clique_sur_le_menu_burger_puis_le_plus_puis_événements() throws InterruptedException {
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		actions.click(driver.findElement(By.xpath("/html/body/div[1]/div/header/div/div/label/span/i")));
 		actions.build().perform();
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		actions.click(driver.findElement(By.xpath("/html/body/div[1]/div/header/div/div/nav/div[1]/nav[1]/ol/li[10]/a")));
 		actions.build().perform();
 	}
@@ -84,17 +82,19 @@ public class EventsSteps {
 	@When("^je choisi un lieu dans le monde$")
 	public void je_choisi_un_lieu_dans_le_monde() throws InterruptedException {
 		String inputSearch = "/html/body/div[2]/div/div[3]/div/main/div/div[1]/div/div/section[2]/div/div[1]/div[3]/div/form/div/div/fieldset/div/div/div/input";
-		driver.findElement(By.xpath(inputSearch)).clear();
-		Thread.sleep(500);
-		driver.findElement(By.xpath(inputSearch)).sendKeys("Paris");
-		Thread.sleep(500);
-		driver.findElement(By.xpath(inputSearch)).sendKeys(Keys.ENTER);
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), "").build().perform();
+		Thread.sleep(3000);
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), "Paris").build().perform();
+		Thread.sleep(3000);
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), Keys.ENTER).build().perform();
 	}
 
 	@Then("^je dois avoir les prochains événements$")
 	public void je_dois_avoir_les_prochains_événements() throws InterruptedException {
-		Thread.sleep(500);
-		int elementCount = driver.findElements(By.className("content")).size();
+		String selectorEvent = "#article_content > div > div.left-column.panel-panel > div.panel-pane.pane-views.pane-events-page > div > div > div.view-content";
+		int elementCount = driver.findElement(By.cssSelector(selectorEvent)).findElements(By.className("content")).size();
+
+		Thread.sleep(5000);
 		assertEquals(15, elementCount);
 	}
 
@@ -142,9 +142,9 @@ public class EventsSteps {
 	public void j_envoi_le_formulaire_sans_remplir_l_email() throws InterruptedException {
 		WebElement email = driver.findElement(By.id("edit-usermail-td"));
 		WebElement name = driver.findElement(By.id("edit-firstname-td"));
-		name.sendKeys("Brian");
-		email.clear();
-		Thread.sleep(500);
+		actions.sendKeys(name, "Brian").build().perform();
+		actions.sendKeys(email, "").build().perform();
+		Thread.sleep(3000);
 		actions.click(driver.findElement(By.name("ajax-submit")));
 		actions.build().perform();
 	}
@@ -158,36 +158,37 @@ public class EventsSteps {
 
 	@When("^je recherche \"([^\"]*)\"$")
 	public void je_recherche(String arg1) throws InterruptedException {
-		String inputSearch = "/html/body/div[2]/div/div[3]/div/main/div/div[1]/div/div/section[2]/div/div[1]/div[3]/div/form/div/div/fieldset/div/div/div/input";
-		driver.findElement(By.xpath(inputSearch)).clear();
+		String inputSearch = "#edit-geoautocomplete";
+		WebElement target = driver.findElement(By.cssSelector(inputSearch));
+
+		actions.sendKeys(target,arg1).build().perform();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(inputSearch)).sendKeys(arg1);
+		actions.sendKeys(target, Keys.ENTER).build().perform();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(inputSearch)).sendKeys(Keys.ENTER);
 	}
 
 	@Then("^le premier resultat doit être localisé à \"([^\"]*)\"$")
 	public void le_premier_resultat_doit_être_localisé_à(String arg1) throws InterruptedException {
 		Thread.sleep(3000);
-		String location = driver.findElement(By.className("location-teaser")).getText();
-		assertTrue(location.contains(arg1));
+		String location = driver.findElement(By.className("location-teaser")).getAttribute("innerHTML");
+		assertTrue(location.contains(arg1.trim()));
 	}
 
 	@When("^je recherche et clique sur un événement \"([^\"]*)\"$")
 	public void je_recherche_et_clique_sur_un_événement(String arg1) throws InterruptedException {
 		String inputSearch = "/html/body/div[2]/div/div[3]/div/main/div/div[1]/div/div/section[2]/div/div[1]/div[3]/div/form/div/div/fieldset/div/div/div/input";
-		driver.findElement(By.xpath(inputSearch)).clear();
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), "").build().perform();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(inputSearch)).sendKeys(arg1);
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), arg1).build().perform();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(inputSearch)).sendKeys(Keys.ENTER);
+		actions.sendKeys(driver.findElement(By.xpath(inputSearch)), Keys.ENTER).build().perform();
 		actions.click(driver.findElement(By.cssSelector("#node-54371 > div > h2 > a")));
 		actions.build().perform();
 	}
 
 	@Then("^je suis redirigé vers la page \"([^\"]*)\"$")
 	public void je_suis_redirigé_vers_la_page(String arg1) throws InterruptedException {
-		Thread.sleep(500);
+		Thread.sleep(3000);
 		String redirectUrl = driver.getCurrentUrl();
 		assertTrue(redirectUrl.contains(arg1));
 	}

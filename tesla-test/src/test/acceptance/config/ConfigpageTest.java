@@ -6,10 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/acceptance/config"}, // ou se situe votre fichier .feature
-		plugin = { "pretty", "json:cucumber-reports/config.json" }
-		)
-
+	features = {"src/test/acceptance/config"},
+	plugin = { "pretty", "json:cucumber-reports/config.json" }
+	)
 public class ConfigpageTest {
 
 }
