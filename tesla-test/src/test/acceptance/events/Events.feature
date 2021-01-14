@@ -27,6 +27,7 @@ Feature: Fonctionnalités de la page évènements
 		When je recherche "Londres, Royaume-Uni"
 		Then le premier resultat doit être localisé à "Royaume-Uni"
 
+	#J'ai du mettre Londres car aucun événement a venir sur Tokyo
 	Scenario: Vérification de l'inscription à un événement
 		Given je suis sur la page événements
 		When je recherche et clique sur un événement "Londres"

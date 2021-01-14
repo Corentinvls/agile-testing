@@ -233,5 +233,4 @@ public class EventsSteps {
 	public void afterScenario() {
 		driver.quit();
 	}
-
 }
