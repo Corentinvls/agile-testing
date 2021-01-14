@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 
 public class ConfigpageSteps {
 
-	public static WebDriver driver;
+	private WebDriver driver;
 	private Actions actions;
 	private Integer priceLoa;
 	private Integer priceLoaWithAutoPilot;
@@ -34,12 +34,12 @@ public class ConfigpageSteps {
 						"/Library/Java/JUNIT/chromedriver");
 
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--lang=fr");
-		//chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
 		driver = new ChromeDriver(chromeOptions);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().setSize(new Dimension(1920, 1080));
+
 		actions = new Actions(driver);
 	}
 

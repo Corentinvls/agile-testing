@@ -22,7 +22,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class HomepageSteps {
 
-	public static WebDriver driver;
+	private WebDriver driver;
+	private Actions actions;
 
 	@Before
 	public void beforeScenario() {
@@ -36,12 +37,13 @@ public class HomepageSteps {
 						"/Library/Java/JUNIT/chromedriver");
 
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--lang=fr");
 		chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
 		driver = new ChromeDriver(chromeOptions);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		//driver.manage().window().setSize(new Dimension(1920, 1080));
+		driver.manage().window().setSize(new Dimension(1920, 1080));
+
+		actions = new Actions(driver);
 	}
 
 	@After
@@ -93,7 +95,6 @@ public class HomepageSteps {
 
 	@When("^je clique sur le menu burger$")
 	public void je_clique_sur_le_menu_burger() {
-		Actions actions = new Actions(driver);
 		String iconMenuXPath = "/html/body/div[1]/div/header/div/div/label/span";
 		actions.click(driver.findElement(By.xpath(iconMenuXPath))).build().perform();
 	}
