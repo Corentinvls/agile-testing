@@ -124,7 +124,7 @@ public class ResearchSteps {
 	public void jeCliqueSurLeBouton() {
 		Actions actions = new Actions(driver);
 
-		actions.click(driver.findElement(By.id("simple-view-selector-event")));
+		actions.click(driver.findElement(By.className("tds-menu-header-main--trigger_icon")));
 		actions.build().perform();
 	}
 
