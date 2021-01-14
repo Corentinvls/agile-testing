@@ -1,0 +1,282 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1172703330,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Vérification du titre et du bouton",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-jobs;vérification-du-titre-et-du-bouton",
+        "after": [
+          {
+            "result": {
+              "duration": 135417576,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3051825562,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "je suis sur \"https://www.meetup.com/fr-FR/careers/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/fr-FR/careers/",
+                  "offset": 13
+                }
+              ],
+              "location": "JobsSteps.je_suis_sur(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 33892464,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "le titre pour job doit être \"Join our team, find your people\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Join our team, find your people",
+                  "offset": 29
+                }
+              ],
+              "location": "JobsSteps.le_titre_pour_job_doit_être(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 181744962,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "la button contient \"Explore Opportunities\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Explore Opportunities",
+                  "offset": 20
+                }
+              ],
+              "location": "JobsSteps.la_button_contient(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1294465894,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Vérification du click sur Explore Opportunities",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-jobs;vérification-du-click-sur-explore-opportunities",
+        "after": [
+          {
+            "result": {
+              "duration": 136419343,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2854709742,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "je suis sur \"https://www.meetup.com/fr-FR/careers/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/fr-FR/careers/",
+                  "offset": 13
+                }
+              ],
+              "location": "JobsSteps.je_suis_sur(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 271159998,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "je clicke sur le bouton Explore Opportunities",
+            "match": {
+              "location": "JobsSteps.je_clicke_sur_le_bouton_Explore_Opportunities()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42614229,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Le nombre d\u0027emploies affiché est de \"9\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "9",
+                  "offset": 37
+                }
+              ],
+              "location": "JobsSteps.le_nombre_d_emploies_affiché_est_de(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19335425,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "le bouton all opportunities redirige vers \"https://www.meetup.com/careers/all-opportunities\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/careers/all-opportunities",
+                  "offset": 43
+                }
+              ],
+              "location": "JobsSteps.le_bouton_all_opportunities_redirige_vers(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1186659913,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.beforeScenario()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Vérification du block carière chez MeetUp",
+        "description": "",
+        "id": "fonctionnalités-de-ma-page-jobs;vérification-du-block-carière-chez-meetup",
+        "after": [
+          {
+            "result": {
+              "duration": 115127676,
+              "status": "passed"
+            },
+            "match": {
+              "location": "JobsSteps.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2678999525,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "je suis sur \"https://www.meetup.com/fr-FR/careers/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.meetup.com/fr-FR/careers/",
+                  "offset": 13
+                }
+              ],
+              "location": "JobsSteps.je_suis_sur(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 29474497,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "la punchline est \"Perks and benefits\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Perks and benefits",
+                  "offset": 18
+                }
+              ],
+              "location": "JobsSteps.la_punchline_est(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 187343642,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Le nombre d\u0027illustration affiché est de \"6\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 41
+                }
+              ],
+              "location": "JobsSteps.le_nombre_d_illustration_affiché_est_de(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Fonctionnalités de ma page Jobs",
+    "description": "",
+    "id": "fonctionnalités-de-ma-page-jobs",
+    "keyword": "Feature",
+    "uri": "Jobs.feature"
+  }
+]
