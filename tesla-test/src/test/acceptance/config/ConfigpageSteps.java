@@ -33,12 +33,13 @@ public class ConfigpageSteps {
 						"chromedriver.exe" :
 						"/Library/Java/JUNIT/chromedriver");
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--lang=fr");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--lang=fr");
+		//chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver(chromeOptions);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().window().setSize(new Dimension(1920,1080));
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 		actions = new Actions(driver);
 	}
 
