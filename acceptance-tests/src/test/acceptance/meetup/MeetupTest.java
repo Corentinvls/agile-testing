@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/acceptance/meetup.json"}, // ou se situe votre fichier .feature
-		plugin = { "pretty", "json:cucumber-reports/meetup.json.json" }
+		features = {"src/test/acceptance/meetup"}, // ou se situe votre fichier .feature
+		plugin = { "pretty", "json:cucumber-reports/meetup.json" }
 	)
 public class MeetupTest {
 

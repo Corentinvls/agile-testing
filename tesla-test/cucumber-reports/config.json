@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 4293274485,
+              "duration": 2625744832,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 319793464,
+              "duration": 218619130,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5819742867,
+              "duration": 26457387535,
               "status": "passed"
             },
             "line": 3,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 410862483,
+              "duration": 229989312,
               "status": "passed"
             },
             "line": 4,
@@ -58,16 +58,15 @@
           },
           {
             "result": {
-              "duration": 10645594257,
-              "error_message": "org.junit.ComparisonFailure: expected:\u003c.../fr_fr/models/design[#battery]\u003e but was:\u003c.../fr_fr/models/design[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat test.acceptance.config.ConfigpageSteps.l_url_de_la_page_doit_être(ConfigpageSteps.java:67)\n\tat ✽.Then l\u0027url de la page doit être \"https://www.tesla.com/fr_fr/models/design#battery\"(Configpage.feature:5)\n",
-              "status": "failed"
+              "duration": 2049130280,
+              "status": "passed"
             },
             "line": 5,
-            "name": "l\u0027url de la page doit être \"https://www.tesla.com/fr_fr/models/design#battery\"",
+            "name": "l\u0027url de la page doit être \"https://www.tesla.com/fr_fr/models/design\"",
             "match": {
               "arguments": [
                 {
-                  "val": "https://www.tesla.com/fr_fr/models/design#battery",
+                  "val": "https://www.tesla.com/fr_fr/models/design",
                   "offset": 28
                 }
               ],
@@ -77,7 +76,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 10430338186,
+              "status": "passed"
             },
             "line": 6,
             "name": "le prix affiché est un prix \"LOA\" avec \"A partir de 768 € /mois*\"",
@@ -102,7 +102,7 @@
         "before": [
           {
             "result": {
-              "duration": 2106215581,
+              "duration": 1954133498,
               "status": "passed"
             },
             "match": {
@@ -117,7 +117,7 @@
         "after": [
           {
             "result": {
-              "duration": 273432830,
+              "duration": 236717683,
               "status": "passed"
             },
             "match": {
@@ -130,7 +130,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16765307889,
+              "duration": 26500375671,
               "status": "passed"
             },
             "line": 9,
@@ -142,7 +142,7 @@
           },
           {
             "result": {
-              "duration": 375428475,
+              "duration": 206675300,
               "status": "passed"
             },
             "line": 10,
@@ -154,7 +154,7 @@
           },
           {
             "result": {
-              "duration": 12144462968,
+              "duration": 16652924458,
               "status": "passed"
             },
             "line": 11,
@@ -175,7 +175,7 @@
           },
           {
             "result": {
-              "duration": 164202499,
+              "duration": 136005940,
               "status": "passed"
             },
             "line": 12,
@@ -200,7 +200,7 @@
           },
           {
             "result": {
-              "duration": 90017025,
+              "duration": 29626925,
               "status": "passed"
             },
             "line": 13,
@@ -221,7 +221,7 @@
           },
           {
             "result": {
-              "duration": 560995100,
+              "duration": 218522197,
               "status": "passed"
             },
             "line": 14,
@@ -246,7 +246,7 @@
         "before": [
           {
             "result": {
-              "duration": 2097344320,
+              "duration": 1481330078,
               "status": "passed"
             },
             "match": {
@@ -261,7 +261,7 @@
         "after": [
           {
             "result": {
-              "duration": 266350491,
+              "duration": 240926950,
               "status": "passed"
             },
             "match": {
@@ -274,7 +274,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8808118045,
+              "duration": 21181825786,
               "status": "passed"
             },
             "line": 9,
@@ -286,7 +286,7 @@
           },
           {
             "result": {
-              "duration": 378156356,
+              "duration": 188171276,
               "status": "passed"
             },
             "line": 10,
@@ -298,7 +298,7 @@
           },
           {
             "result": {
-              "duration": 14630137642,
+              "duration": 16334527946,
               "status": "passed"
             },
             "line": 11,
@@ -319,7 +319,7 @@
           },
           {
             "result": {
-              "duration": 300112602,
+              "duration": 168995694,
               "status": "passed"
             },
             "line": 12,
@@ -344,7 +344,7 @@
           },
           {
             "result": {
-              "duration": 69459751,
+              "duration": 36479447,
               "status": "passed"
             },
             "line": 13,
@@ -365,7 +365,7 @@
           },
           {
             "result": {
-              "duration": 313798357,
+              "duration": 229364801,
               "status": "passed"
             },
             "line": 14,
@@ -390,7 +390,7 @@
         "before": [
           {
             "result": {
-              "duration": 1921813189,
+              "duration": 1529311346,
               "status": "passed"
             },
             "match": {
@@ -405,7 +405,7 @@
         "after": [
           {
             "result": {
-              "duration": 292991405,
+              "duration": 212933493,
               "status": "passed"
             },
             "match": {
@@ -418,7 +418,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6643046100,
+              "duration": 26699692389,
               "status": "passed"
             },
             "line": 21,
@@ -430,7 +430,7 @@
           },
           {
             "result": {
-              "duration": 326435993,
+              "duration": 194097113,
               "status": "passed"
             },
             "line": 22,
@@ -442,7 +442,7 @@
           },
           {
             "result": {
-              "duration": 11465918147,
+              "duration": 13909713284,
               "status": "passed"
             },
             "line": 23,
@@ -460,7 +460,7 @@
           },
           {
             "result": {
-              "duration": 2748833030,
+              "duration": 1967678442,
               "status": "passed"
             },
             "line": 24,
@@ -472,7 +472,7 @@
           },
           {
             "result": {
-              "duration": 1411239,
+              "duration": 1398404,
               "status": "passed"
             },
             "line": 25,
@@ -494,7 +494,7 @@
         "before": [
           {
             "result": {
-              "duration": 2388754437,
+              "duration": 1530005145,
               "status": "passed"
             },
             "match": {
@@ -509,7 +509,7 @@
         "after": [
           {
             "result": {
-              "duration": 440040072,
+              "duration": 209761543,
               "status": "passed"
             },
             "match": {
@@ -522,7 +522,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10494479896,
+              "duration": 21137017089,
               "status": "passed"
             },
             "line": 28,
@@ -534,7 +534,7 @@
           },
           {
             "result": {
-              "duration": 489454546,
+              "duration": 172818881,
               "status": "passed"
             },
             "line": 29,
@@ -546,7 +546,7 @@
           },
           {
             "result": {
-              "duration": 13544098457,
+              "duration": 15003700856,
               "status": "passed"
             },
             "line": 30,
@@ -564,7 +564,7 @@
           },
           {
             "result": {
-              "duration": 11664108869,
+              "duration": 26741751721,
               "status": "passed"
             },
             "line": 31,
@@ -576,7 +576,7 @@
           },
           {
             "result": {
-              "duration": 51195499,
+              "duration": 9259615,
               "status": "passed"
             },
             "line": 32,

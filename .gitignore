@@ -90,3 +90,6 @@ dc.yml
 .env.production.local
 *.exe
 *.class
+
+tesla-test/PixelPerfectTesla/shots_base
+tesla-test/PixelPerfectTesla/shots

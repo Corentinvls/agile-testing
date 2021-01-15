@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/acceptance/research.json"}, // ou se situe votre fichier .feature
-		plugin = { "pretty", "json:cucumber-reports/research.json.json" }
+		features = {"src/test/acceptance/research"}, // ou se situe votre fichier .feature
+		plugin = { "pretty", "json:cucumber-reports/research.json" }
 	)
 public class ResearchTest {
 

@@ -122,9 +122,11 @@ public class ResearchSteps {
 
 	@When("^je clique sur le bouton$")
 	public void jeCliqueSurLeBouton() {
+		String selector = "#simple-view-selector-event";
+
 		Actions actions = new Actions(driver);
 
-		actions.click(driver.findElement(By.className("tds-menu-header-main--trigger_icon")));
+		actions.click(driver.findElement(By.cssSelector(selector)));
 		actions.build().perform();
 	}
 
@@ -144,11 +146,13 @@ public class ResearchSteps {
 	}
 
 	@When("^je clique sur le /21 du mois courant$")
-	public void jeCliqueSurLe21DuMoisCourant() {
+	public void jeCliqueSurLe21DuMoisCourant() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		String xpathTwentyOneCalendar = "/html/body/div[3]/div[2]/div/div/div/div[2]/div[2]/div[1]/div/table/tbody/tr[4]/td[4]";
+		String selector = "#simple-view-selector-event";
 
-		actions.click(driver.findElement(By.id("simple-view-selector-event")));
+
+		actions.click(driver.findElement(By.cssSelector(selector)));
 		actions.build().perform();
 
 		actions.click(driver.findElement(By.xpath(xpathTwentyOneCalendar)));

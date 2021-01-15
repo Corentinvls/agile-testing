@@ -7,8 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/acceptance/home.json"}, // ou se situe votre fichier .feature
-		plugin = { "pretty", "json:cucumber-reports/home.json.json" }
+		features = {"src/test/acceptance/home"}, // ou se situe votre fichier .feature
+		plugin = { "pretty", "json:cucumber-reports/home.json" }
 	)
 public class HomepageTest {
 
